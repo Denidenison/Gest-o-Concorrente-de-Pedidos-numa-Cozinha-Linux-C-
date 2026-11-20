@@ -1,0 +1,4 @@
+1;bacalhau;2000
+2;sushi;2500
+3;Espaguete com molho branco;2300
+4;Ratatuille; 4000
