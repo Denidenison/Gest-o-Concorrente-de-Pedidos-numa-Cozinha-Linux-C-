@@ -8,6 +8,7 @@ typedef struct{
 	int id_pedido;
 	char prato[50];
 	int tempo_confecao;	
+	Pedido* p_pedido;
 } Pedido;
 
 //Lê todos os argumentos passados pelo usuário
@@ -19,9 +20,9 @@ void ler_argumentos(char *argv[],char **nome_ficheiro, int* num_cozinheiros,int*
 }
 
 //Lê do ficheiro e prepara um Array com todos os pedidos e suas informações
-void ler_ficheiro(FILE *f, Pedido fila_pedidos[], int capacidade_fila) {
+void ler_ficheiro(FILE *f, Pedido fila_pedidos[]) {
     int i = 0;
-    while (i < capacidade_fila && fscanf(f, "%d;%49[^;];%d", &fila_pedidos[i].id_pedido, fila_pedidos[i].prato, &fila_pedidos[i].tempo_confecao) == 3) {
+    while (fscanf(f, "%d;%49[^;];%d", &fila_pedidos[i].id_pedido, fila_pedidos[i].prato, &fila_pedidos[i].tempo_confecao) == 3) {
         i++;
     }
 }
