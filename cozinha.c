@@ -3,12 +3,6 @@
 #include <string.h>
 #include "cozinha.h"
 
-//estrutura de dados para organizar cada pedido
-struct pedidos{
-	int id_pedido;
-	char prato[50];
-	int tempo_confecao;	
-};
 
 //Lê todos os argumentos passados pelo usuário
 void ler_argumentos(char *argv[],char **nome_ficheiro, int* num_cozinheiros,int* capacidade_fila,int* num_fogoes){
